@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /uploads/
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+Sitemap: https://kayan-eg.com/sitemap.xml
+
+# Crawl-delay: 10

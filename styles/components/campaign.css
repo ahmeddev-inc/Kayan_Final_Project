@@ -1,0 +1,61 @@
+/* Campaign Bar */
+.campaign-bar {
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  color: white;
+  padding: 0.75rem 0;
+  overflow: hidden;
+  position: relative;
+  margin-top: 80px; /* للتعويض عن الهيدر الثابت */
+}
+
+.campaign-track {
+  display: flex;
+  animation: scrollCampaign 30s linear infinite;
+  white-space: nowrap;
+}
+
+.campaign-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0 var(--space-xl);
+  flex-shrink: 0;
+}
+
+.campaign-icon {
+  font-size: 1.2rem;
+}
+
+.campaign-text {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+@keyframes scrollCampaign {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover */
+.campaign-bar:hover .campaign-track {
+  animation-play-state: paused;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .campaign-bar {
+    padding: 0.5rem 0;
+  }
+  
+  .campaign-item {
+    padding: 0 var(--space-lg);
+  }
+  
+  .campaign-text {
+    font-size: 0.85rem;
+  }
+}
